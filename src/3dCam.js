@@ -21,15 +21,29 @@ export class Cam {
     }
     async takePicture() {
         let blobs = []
+        let data = []
         for (let distance of focusDistances) {
             await this.track.applyConstraints({
                 advanced: [{
-                    focusMode: "manual",
-                    focusDistance: distance
+                    //focusMode: "manual",
+                    //zoom: distance + 1
                 }]
             });
             this.imageCapturer.takePhoto().then(
-                (blob) => blobs.push(blob)
+                (blob) => {
+                    blobs.push(blob);
+                    const url = URL.createObjectURL(blob);
+                    let img = new Image();
+                    img.onload = () => {
+                        URL.revokeObjectURL(url);
+                        const canvas = document.createElement("canvas")
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        const buffer=canvas.getContext("2d").getImageData(0,0,canvas.width,canvas.height).data.buffer;
+                        data.push(buffer);
+                    }
+                    img.src = url;
+                }
             );
         }
     }
