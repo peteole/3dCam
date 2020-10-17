@@ -1,0 +1,3 @@
+/home/olep/Documents/3dCam/src/wasm/build/CMakeFiles/rebuild_cache.dir
+/home/olep/Documents/3dCam/src/wasm/build/CMakeFiles/edit_cache.dir
+/home/olep/Documents/3dCam/src/wasm/build/CMakeFiles/output.dir

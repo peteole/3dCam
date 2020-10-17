@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Image.h
+emscripten/bind.h
+-
+emscripten.h
+-
+
+/home/olep/Documents/3dCam/src/wasm/src/Image.cpp
+Image.h
+/home/olep/Documents/3dCam/src/wasm/src/Image.h
+

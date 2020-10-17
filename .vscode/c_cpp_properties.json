@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "clang-x64"
+        },
+        {
+            "name": "WASM",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/lib/emsdk/upstream/emscripten/system/include/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/lib/emsdk/upstream/emscripten/em++",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
